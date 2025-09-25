@@ -33,15 +33,15 @@ header {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 90px 20px;
     position: sticky;
     top: 0;
     z-index: 900;
     animation: slideIn 0.5s ease-in-out;
 }
 
-header h1 {
-    font-size: 2.8rem;
+header h6 {
+    font-size: 0.80rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 750;
