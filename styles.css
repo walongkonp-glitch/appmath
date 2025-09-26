@@ -57,26 +57,31 @@ header h6 {
    Navigation
    ========================== */
 nav {
-    font-size: 0.9em;
-    padding: 10px 15px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 5px;
-    background-color: #004d40;
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;   /* ให้ขึ้นบรรทัดใหม่ถ้าเกินหน้าจอ */
+  justify-content: center; /* จัดกลาง */
+  background-color: #004d40; /* สีเขียวเข้ม */
+  padding: 10px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
-    padding: 10px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+  margin: 5px 10px;
+  font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* ในมือถือให้เรียงเป็นแนวตั้ง */
+    align-items: center;
+  }
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
 
 nav a:hover,
 nav a.active {
