@@ -1,64 +1,52 @@
+<html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก - สาขาวิชาคณิตศาสตร์และสถิติ วิทยาเขตกำแพงแสน</title>
-    
+    <title>การเข้าศึกษาต่อ - สาขาวิชาคณิตศาสตร์และสถิติ วิทยาเขตกำแพงแสน</title>
     <link rel="stylesheet" href="styles.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" 
-        src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v17.0">
-    </script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+<script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v17.0">
+</script>
 </head>
 <body>
     <header>
     <img src="logo.png" alt="โลโก้ คณะศิลปศาสตร์และวิทยาศาสตร์">
     <h1>สาขาวิชาคณิตศาสตร์และสถิติ วิทยาเขตกำแพงแสน</h1>
 </header>
+
     <nav>
-        <a href="index.html">หน้าแรก</a>
+       <a href="index.html">หน้าแรก</a>
         <a href="news.html">ข่าวประชาสัมพันธ์</a>
         <a href="general-info.html">ข้อมูลทั่วไป</a>
         <a href="documents.html">เอกสารและคำร้อง</a>
         <a href="singup .html">เข้าศึกษาต่อ</a>
         <a href="contact.html">ติดต่อเรา</a>
     </nav>
+    <div class="image-container"style="text-align: center; margin: 20px 0;">
+           <img src="Tcas.jpg"  width="700px" />
+           <img src="ข้อมูล.jpg"  width="700px">
+    </div>
+    <p>ระเบียบการรับสมัครและคัดเลือกบุคคลเข้าศึกษาต่อ
+ในสถาบันอุดมศึกษา :TCAS รอบที่ 1
+โครงการรับเข้าด้วยแฟ้มสะสมผลงาน (Portfolio) </p>
 
-    <section class="swiper-container-section">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="Tcas.jpg" alt="รูปสไลด์ 1">
-                </div>
-                <div class="swiper-slide">
-                    <img src="ข้อมูล.jpg" alt="รูปสไลด์ 2">
-                </div>
-                <div class="swiper-slide">
-                    <img src="แข่งขัน.jpg" alt="รูปสไลด์ 3">
-                </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-
-    <section class="video-section">
-        <h2>วิดีโอแนะนำสาขาวิชาคณิตศาสตร์และสถิติ วิทยาเขตกำแพงแสน</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/Ta9k-6DEeJo" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+    <!--ดาวน์โหลด -->
+    <p>
+        🔗 <a href="ระเบียบการ TCAS 1- 2569.pdf" target="_blank">
+            เปิด/ดาวน์โหลดไฟล์ 
+        </a>
+    </p>
+    <!--ฝังดู PDF ในหน้า -->
+    <iframe 
+        src="ระเบียบการ TCAS 1- 2569.pdf" 
+        width="100%" 
+        height="500px" 
+        style="border: 1px solid #ccc; margin-top: 10px;">
+    </iframe>
+</details>
  <footer class="site-footer">
         <div class="footer-container">
 
@@ -113,28 +101,3 @@
             <p>© 2025 สาขาวิชาคณิตศาสตร์และสถิติ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน</p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            loop: true,
-        });
-    </script>
-
-</body>
-</html>
