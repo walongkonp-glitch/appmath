@@ -28,7 +28,7 @@ body {
     color: var(--dark-gray);
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #FFFFFF;
+    background-color: white;
 }
 
 /* ==========================
@@ -40,7 +40,7 @@ header {
     background-image: url('ภาพปก.png');
     background-size: cover;
     background-position: left;
-    color: whitesmoke;
+    color: #74787B;
     padding: 90px 30px;
     text-align: left;
     display: flex;
@@ -56,7 +56,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* สีดำ โปร่งแสง 50% */
+    background-color: rgba(0, 0, 0, 0.8); /* สีดำ โปร่งแสง 50% */
     z-index: 1; /* ให้ overlay อยู่ชั้นที่ 1 */
 }
 
@@ -868,4 +868,67 @@ footer.site-footer {
     nav {
         position: static; /* คืนค่าเป็นปกติ (ไม่ sticky) */
     }
+}
+.details-container > details > summary {
+    cursor: pointer;
+    padding: 1rem; /* เพิ่มช่องว่างภายใน */
+    margin-top: 10px; /* เพิ่มระยะห่างระหว่างแถบ */
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    list-style: none; /* เอาลูกศรสามเหลี่ยมเริ่มต้นออก */
+    transition: background-color 0.2s; /* เพิ่มเอฟเฟกต์ตอนเอาเมาส์ชี้ */
+}
+
+/* ตกแต่งตัวชี้ + / - ด้านหน้า */
+.details-container > details > summary::before {
+    content: '+ ';
+    margin-right: 10px;
+}
+.details-container > details[open] > summary::before {
+    content: '− ';
+}
+
+/* ใส่สีให้แถบต่างๆ */
+.details-container > details:nth-of-type(1) > summary {
+    background-color: #A9D18E; /* สีเขียวอ่อน */
+}
+.details-container > details:nth-of-type(1) > summary:hover {
+    background-color: #9dce80;
+}
+
+.details-container > details:nth-of-type(2) > summary {
+    background-color: #A9D18E; /* สีเขียวอ่อน */
+}
+.details-container > details:nth-of-type(2) > summary:hover {
+    background-color: #9dce80;
+}
+
+.details-container > details:nth-of-type(3) > summary {
+    background-color: #A9D18E; /* สีเขียวอ่อน */
+}
+.details-container > details:nth-of-type(3) > summary:hover {
+    background-color: #9dce80;
+}
+
+.details-container > details:nth-of-type(4) > summary {
+    background-color: #FDCB7C; /* สีส้ม/เหลือง */
+}
+ .details-container > details:nth-of-type(4) > summary:hover {
+    background-color: #fcc261;
+}
+
+/* --- ส่วนสำคัญ: ทำให้การเปิด-ปิดนุ่มนวล --- */
+details > :not(summary) {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 20px; 
+}
+
+details[open] > :not(summary) {
+    max-height: 3000px; /* ตั้งค่าเผื่อไว้สูงๆ */
+    opacity: 1;
+    padding: 10px 20px; /* คืน padding กลับมา */
 }
