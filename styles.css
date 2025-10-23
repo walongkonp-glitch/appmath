@@ -863,3 +863,9 @@ footer.site-footer {
         justify-content: center;
     }
 }
+/*โค้ดนี้จะทำงานเมื่อหน้าจอมีขนาดเล็กกว่า*/
+@media (max-width: 768px) {
+    nav {
+        position: static; /* คืนค่าเป็นปกติ (ไม่ sticky) */
+    }
+}
