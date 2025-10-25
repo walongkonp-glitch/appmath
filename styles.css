@@ -17,11 +17,19 @@
 }
 
 /*Reset และตั้งค่าพื้นฐาน */
+/*Reset และตั้งค่าพื้นฐาน */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
+
+/* === โค้ดสำหรับไว้ทุกข์ (วางตรงนี้) === */
+html {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+/* ================================ */
 
 body {
     font-family: 'Prompt', sans-serif;
